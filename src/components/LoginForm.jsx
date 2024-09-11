@@ -47,14 +47,14 @@ const App = () => {
           },
         ]}
       >
-        <Input prefix={<LockOutlined />} type="password" placeholder="Senha" />
+        <Input.Password prefix={<LockOutlined />} type="password" placeholder="Senha" />
       </Form.Item>
       <Form.Item>
         <Flex justify="space-between" align="center">
           <Form.Item name="remember" valuePropName="checked" noStyle>
             <Checkbox>Manter-me logado</Checkbox>
           </Form.Item>
-          <a href="">Esqueci minha senha?</a>
+          <a href="">Esqueceu sua senha?</a>
         </Flex>
       </Form.Item>
 
@@ -63,7 +63,7 @@ const App = () => {
           Entrar
         </Button>
         <a style={{ display: "block", marginTop: "10px" }} href="">
-          Registre-se Agora!
+          Registre-se agora!
         </a>
       </Form.Item>
     </Form>

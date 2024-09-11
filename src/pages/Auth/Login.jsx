@@ -1,15 +1,14 @@
-import App from "../../components/Form";
+import App from "../../components/LoginForm";
 
-function Login() {
-
+const Login = () => {
   return (
-    <section className="flex justify-center items-center min-h-[85vh]">
+    <section className="flex justify-center items-center min-h-[85vh] text-center">
       <div>
         <div className="mb-20">Entrar</div>
         <App />
       </div>
     </section>
   );
-}
+};
 
 export default Login;

@@ -1,9 +1,20 @@
 import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Flex } from "antd";
+import { login } from "../utils/auth";
+import { useNavigate } from "react-router-dom";
+
 const App = () => {
-  const onFinish = (values) => {
-    console.log("Received values of form: ", values);
+  const navigate = useNavigate();
+
+  const onFinish = async (values) => {
+    try {
+      const data = await login(values); 
+      console.log('login bem-sucedido:', data);
+      navigate("/dashboard");  
+    } catch (error) {
+      console.error('erro ao tentar fazer login:', error.message);
+    }
   };
   return (
     <Form
@@ -36,11 +47,7 @@ const App = () => {
           },
         ]}
       >
-        <Input
-          prefix={<LockOutlined />}
-          type="password"
-          placeholder="Senha"
-        />
+        <Input prefix={<LockOutlined />} type="password" placeholder="Senha" />
       </Form.Item>
       <Form.Item>
         <Flex justify="space-between" align="center">
@@ -55,7 +62,9 @@ const App = () => {
         <Button block type="primary" htmlType="submit">
           Entrar
         </Button>
-        ou <a href="">Registre-se Agora!</a>
+        <a style={{ display: "block", marginTop: "10px" }} href="">
+          Registre-se Agora!
+        </a>
       </Form.Item>
     </Form>
   );

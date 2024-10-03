@@ -11,6 +11,17 @@ const Header = () => {
       </div>
       <div className='flex space-x-4'>
         <Button 
+          buttonText="Home" 
+          typeButton="text" 
+          href="/"/>
+        <Button 
+          buttonText="Dashboard" 
+          typeButton="text" 
+          href="/dashboard"
+        />
+      </div>
+      <div className='flex space-x-4'>
+        <Button 
           buttonText="Login" 
           typeButton="text" 
           href="/login"/>

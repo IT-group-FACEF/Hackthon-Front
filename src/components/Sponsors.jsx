@@ -34,6 +34,12 @@ const Sponsors = () => {
             <div className="flex items-center pt-[41px] h-[70px] w-[70px]">
                 <img src={imgSponsors} alt="Sponsors" />
             </div>
+            <div className="flex items-center pt-[41px] h-[70px] w-[70px]">
+                <img src={imgSponsors} alt="Sponsors" />
+            </div>
+            <div className="flex items-center pt-[41px] h-[70px] w-[70px]">
+                <img src={imgSponsors} alt="Sponsors" />
+            </div>
         </div>
     </div>
   )

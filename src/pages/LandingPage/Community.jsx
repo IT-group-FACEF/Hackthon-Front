@@ -28,7 +28,7 @@ const Community = () => {
         </div>
         <div className="flex flex-col items-center h-[299px] w-[299px]">
           <p className="flex flex-col items-center">
-           <UserOutlined style={{ fontSize: 65 }}/>
+           <UserOutlined style={{ fontSize: 65 }}/>                                       
            <p className="text-[28px] text-[#4D4D4D] text-center">
            National 
            <span className="block text-center">Associations</span>

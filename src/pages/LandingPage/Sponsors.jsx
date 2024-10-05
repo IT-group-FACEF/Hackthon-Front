@@ -1,4 +1,4 @@
-import imgSponsors from '../assets/sponsorsTemp.jpg'
+import imgSponsors from '../../assets/SponsorsTemp.jpg'
 
 const Sponsors = () => {
   return (
@@ -9,16 +9,7 @@ const Sponsors = () => {
         <p className="text-[16px] text-[#717171]">
             Patrocinadores, que tornaram este evento, uma realidade.
         </p>
-        <div className="flex space-x-[100px] pt-[16px]">
-            <div className="flex items-center pt-[41px] h-[70px] w-[70px]">
-                <img src={imgSponsors} alt="Sponsors" />
-            </div>
-            <div className="flex items-center pt-[41px] h-[70px] w-[70px]">
-                <img src={imgSponsors} alt="Sponsors" />
-            </div>
-            <div className="flex items-center pt-[41px] h-[70px] w-[70px]">
-                <img src={imgSponsors} alt="Sponsors" />
-            </div>
+        <div className="flex space-x-[100px] pt-[16px] px-[136px]">
             <div className="flex items-center pt-[41px] h-[70px] w-[70px]">
                 <img src={imgSponsors} alt="Sponsors" />
             </div>

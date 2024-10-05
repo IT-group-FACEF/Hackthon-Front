@@ -1,5 +1,5 @@
-import logo from '../assets/logo.jpeg';
-import Button from './Button.jsx';
+import logo from '../../assets/logo.jpeg';
+import Button from '../../components/Button.jsx';
 
 const Header = () => {
   return (

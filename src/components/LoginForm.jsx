@@ -1,6 +1,6 @@
 import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input, Flex } from "antd";
+import { Button, Checkbox, Form, Input, Flex, message } from "antd";
 import { login } from "../utils/auth";
 import { useNavigate } from "react-router-dom";
 
@@ -9,13 +9,20 @@ const App = () => {
 
   const onFinish = async (values) => {
     try {
-      const data = await login(values); 
-      console.log('login bem-sucedido:', data);
-      navigate("/dashboard");  
+      const data = await login(values);
+
+      if (data && data.success) {
+        console.log("login bem-sucedido:", data);
+        navigate("/dashboard");
+      } else {
+        throw new Error("Credenciais inválidas");
+      }
     } catch (error) {
-      console.error('erro ao tentar fazer login:', error.message);
+      console.error("erro ao tentar fazer login:", error.message);
+      message.error("Error no login: " + error.messagee);
     }
   };
+
   return (
     <Form
       name="login"
@@ -47,7 +54,11 @@ const App = () => {
           },
         ]}
       >
-        <Input.Password prefix={<LockOutlined />} type="password" placeholder="Senha" />
+        <Input.Password
+          prefix={<LockOutlined />}
+          type="password"
+          placeholder="Senha"
+        />
       </Form.Item>
       <Form.Item>
         <Flex justify="space-between" align="center">

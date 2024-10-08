@@ -3,7 +3,12 @@ import { api } from "./api";
 export const login = async (credentials) => {
   try {
     const response = await api.post("/login", credentials);
-    return response.data;
+
+    if (response.status === 200) {
+      return response.data;
+    } else {
+      throw new Error("Login falhou");
+    }
   } catch (error) {
     console.error("Erro no login:", error);
     throw error;

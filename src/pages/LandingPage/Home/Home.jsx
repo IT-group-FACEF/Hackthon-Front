@@ -9,7 +9,7 @@ const contentStyle = {
 
 const Home = () => {
   return (
-    <Carousel arrows infinite={false} className="custom-arrows custom-dots">
+    <Carousel arrows infinite={true} className="custom-arrows custom-dots" draggable swipeToSlide autoplay>
       <div style={contentStyle}>
         <div className="flex justify-between items-center px-[144px] py-[96px] space-x-4 space-y-9 bg-[#F5F7FA]">
           <div className="flex flex-col">
@@ -46,7 +46,7 @@ const Home = () => {
                 <p className="text-[#4CAF4F]">from 8 years</p>
               </p>
               <p className="text-[16px] text-[#717171] pt-[16px] pb-[32px]">
-                Where to grow your business as a photographer: site or social
+                Where to grow your business as a photographer: site ou social
                 media?
               </p>
             </div>
@@ -73,7 +73,7 @@ const Home = () => {
                 <p className="text-[#4CAF4F]">from 8 years</p>
               </p>
               <p className="text-[16px] text-[#717171] pt-[16px] pb-[32px]">
-                Where to grow your business as a photographer: site or social
+                Where to grow your business as a photographer: site ou social
                 media?
               </p>
             </div>

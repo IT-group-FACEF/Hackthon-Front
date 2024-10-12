@@ -1,25 +1,18 @@
 import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
-import { Button, Checkbox, Form, Input, Flex, message } from "antd";
-import { login } from "../utils/auth";
-import { useNavigate } from "react-router-dom";
+import { Button, Checkbox, Form, Input, Flex } from "antd";
+import { login } from "../utils/auth"; // Importa a função login
+import { useNavigate } from "react-router-dom"; // Para redirecionamento
 
 const App = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Função de navegação
 
   const onFinish = async (values) => {
     try {
-      const data = await login(values);
-
-      if (data && data.success) {
-        console.log("login bem-sucedido:", data);
-        navigate("/dashboard");
-      } else {
-        throw new Error("Credenciais inválidas");
-      }
+      await login(values, navigate); // Chama login e passa 'navigate'
     } catch (error) {
-      console.error("erro ao tentar fazer login:", error.message);
-      message.error("Error no login: " + error.messagee);
+      // Nenhum erro precisa ser tratado aqui, pois já está em auth.js
+      console.error("Erro ao tentar fazer login:", error.message);
     }
   };
 
@@ -80,4 +73,5 @@ const App = () => {
     </Form>
   );
 };
+
 export default App;

@@ -1,8 +1,8 @@
-import axios from 'axios';
+import axios from "axios";
 
 let api = axios.create({
   //baseURL: 'http://localhost:8080/api'
-  baseURL: 'https://backend-node-task.onrender.com/api', // Certifique-se de que o baseURL está correto
+  baseURL: "http://184.73.198.138",
   timeout: 90000,
 });
 

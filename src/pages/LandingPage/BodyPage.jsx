@@ -5,9 +5,10 @@ import { UserOutlined } from "@ant-design/icons";
 import Mobile from "../../assets/Mobile.svg";
 import Tesla from "../../assets/tesla.svg";
 import imgSponsors from "../../assets/SponsorsTemp.jpg";
-// import person from "../../assets/person.svg";
-// import notebook from "../../assets/notebook.svg";
-// import notepad from "../../assets/notepad.svg";
+import person from "../../assets/person.svg";
+import notebook from "../../assets/notebook.svg";
+import notepad from "../../assets/notepad.svg";
+import CardPage from "../../components/CardPage.jsx";
 const BodyPage = () => {
   return (
     <div>
@@ -164,48 +165,44 @@ const BodyPage = () => {
         </div>
       </div>
       {/* Parte de Caring */}
-      {/* <div className="flex flex-col justify-center items-center pt-[48px]">
-        <p className="text-[36px] text-[#4D4D4D] justify-center pb-[8px]">
-          Caring is the new marketing
-        </p>
-        <p className="text-[16px] text-[#717171] justify-center w-[628px] text-center pb-[16px]">
-          The Nexcent blog is the best place to read about the latest membership
-          insights, trends and more. See who's joining the community, read about
-          how our community are increasing their membership income and lot's
-          more.
-        </p>
-        <div className="flex flex-row justify-between items-center h-[366px]">
-          <div className="bg-white shadow-lg rounded-lg p-4 w-full md:w-1/3 m-2 w-[368px] pb-[16px]">
-            <img src={person} alt="Caring" />
-            <div className="flex flex-col justify-center items-center w-[317px] h-[176px]">
-              <h3 className="font-bold text-lg mb-2">Creating Streamlined Safeguarding Processes with OneRen</h3>
-              <Button
-                buttonText="Register"
-                typeButton="text"
-                href="/register"
-              />
-            </div>
-          </div>
-          <div className="bg-white shadow-lg rounded-lg p-4 w-full md:w-1/3 m-2">
-            <img src={notebook} alt="Caring" />
-            <h3 className="font-bold text-lg mb-2">What are your safeguarding responsibilities and how can you manage them?</h3>
-            <Button
-              buttonText="Register"
+      <div className="flex flex-col justify-center pt-[48px]">
+        <div className="flex flex-col justify-center items-center">
+          <p className="text-[36px] text-[#4D4D4D] justify-center pb-[8px] items-center">
+            Caring is the new marketing
+          </p>
+          <p className="text-[16px] text-[#717171] justify-center w-[628px] text-center pb-[16px]">
+            The Nexcent blog is the best place to read about the latest membership
+            insights, trends and more. See who's joining the community, read about
+            how our community are increasing their membership income and lot's
+            more.
+          </p>
+        </div>
+        <div className="flex flex-col justify-center pt-[48px]">
+          <div className="flex flex-row flex-wrap justify-center gap-8">
+            <CardPage
+              imageUrl={person}
+              content="Who's joining the community?"
+              buttonText="Learn More"
               typeButton="text"
-              href="/register"
+              hrefButton="/"
             />
-          </div>
-          <div className="bg-white shadow-lg rounded-lg p-4 w-full md:w-1/3 m-2 ">
-            <img src={notepad} alt="Caring" />
-            <h3 className="font-bold text-lg mb-2">Revamping the Membership Model with Triathlon Australia</h3>
-            <Button
-              buttonText="Register"
+            <CardPage
+              imageUrl={notebook}
+              content="Who's joining the community?"
+              buttonText="Learn More"
               typeButton="text"
-              href="/register"
+              hrefButton="/"
+            />
+            <CardPage
+              imageUrl={notepad}
+              content="Who's joining the community?"
+              buttonText="Learn More"
+              typeButton="text"
+              hrefButton="/"
             />
           </div>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };

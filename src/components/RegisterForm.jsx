@@ -9,12 +9,10 @@ const RegisterForm = () => {
 
   const onFinish = async (values) => {
     try {
-      const data = await register(values); // Chama a função de registro
+      await register(values, navigate); // Chama a função de registro
       console.log("Registro bem-sucedido:", data);
-      navigate("/login"); // Redireciona para o login após o registro
     } catch (error) {
       console.error("Erro ao tentar registrar:", error.message);
-      // Adicione lógica para exibir uma mensagem de erro ao usuário
     }
   };
 

@@ -21,7 +21,14 @@ const Home = () => (
       `}
     </style>
 
-    <Carousel arrows infinite={true} autoplay autoplaySpeed={7000} draggable swipeToSlide>
+    <Carousel
+      arrows
+      infinite={true}
+      autoplay
+      autoplaySpeed={7000}
+      draggable
+      swipeToSlide
+    >
       <div>
         <div className="flex justify-between items-center px-[144px] py-[96px] space-x-4 space-y-9 bg-[#F5F7FA]">
           <div className="flex flex-col">

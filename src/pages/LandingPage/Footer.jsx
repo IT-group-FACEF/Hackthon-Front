@@ -65,15 +65,15 @@ const Footer = () => {
           </div>
         </div>
         <div className="flex flex-col">
-          <p className="text-[20px] text-[#FFFFFF] pb-[24px]">Stay up to date</p>
+          <p className="text-[20px] text-[#FFFFFF] pb-[24px]">
+            Stay up to date
+          </p>
           {/* <Input
             placeholder="Enter your email"
           /> */}
           <div className="flex justify-right items-center w-[255px] h-[40px] bg-[#566573] rounded space-x-[90px] p-[12px]">
-            <p className="text-[14px] text-[#D9DBE1] ">
-            Your email address
-            </p>
-            <SendOutlined style={{ fontSize: 18, color: "#D9DBE1" }}/>
+            <p className="text-[14px] text-[#D9DBE1] ">Your email address</p>
+            <SendOutlined style={{ fontSize: 18, color: "#D9DBE1" }} />
           </div>
         </div>
       </div>

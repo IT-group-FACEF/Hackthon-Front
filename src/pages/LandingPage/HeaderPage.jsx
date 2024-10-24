@@ -1,5 +1,5 @@
-import logo from '../../assets/logo.jpeg';
-import Button from '../../components/Button.jsx';
+import logo from "../../assets/logo.jpeg";
+import Button from "../../components/Button.jsx";
 
 const Header = () => {
   return (
@@ -9,27 +9,17 @@ const Header = () => {
           <img src={logo} alt="Logo" className="h-20" />
         </a>
       </div>
-      <div className='flex space-x-4'>
-        <Button 
-          buttonText="Home" 
-          typeButton="text" 
-          href="/"/>
-        <Button 
-          buttonText="Dashboard" 
-          typeButton="text" 
-          href="/dashboard"
-        />
+      <div className="flex space-x-4">
+        <Button buttonText="Home" typeButton="text" href="/" />
+        <Button buttonText="Dashboard" typeButton="text" href="/dashboard" />
       </div>
-      <div className='flex space-x-4'>
-        <Button 
-          buttonText="Login" 
-          typeButton="text" 
-          href="/login"/>
-        <Button 
-          buttonText="Sign Up" 
-          typeButton="primary" 
+      <div className="flex space-x-4">
+        <Button buttonText="Login" typeButton="text" href="/login" />
+        <Button
+          buttonText="Sign Up"
+          typeButton="primary"
           href="/register"
-          style={{ backgroundColor: '#4CAF4F', color: '#FFFFFF' }}
+          style={{ backgroundColor: "#4CAF4F", color: "#FFFFFF" }}
         />
       </div>
     </div>

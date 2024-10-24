@@ -13,12 +13,12 @@ const Card = ({ imageUrl, content, buttonText, typeButton, hrefButton }) => {
       ></div>
 
       {/* Div branca posicionada no final da imagem */}
-      <div className="absolute inset-x-0 bottom-0 bg-white p-4 shadow-lg rounded-lg mx-auto w-4/5 text-center">
-        <p className="text-[20px] text-[#717171]">{content}</p>
-        <Button 
-            buttonText={buttonText}
-            typeButton={typeButton}
-            href={hrefButton}
+      <div className="flex flex-col absolute inset-x-0 bottom-0 bg-white p-4 shadow-lg rounded-lg mx-auto w-4/5 text-center items-center">
+        <p className="text-[20px] text-[#717171]">{content} </p>
+        <Button
+          buttonText={buttonText}
+          typeButton={typeButton}
+          href={hrefButton}
         />
       </div>
     </div>

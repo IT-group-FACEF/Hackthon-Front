@@ -1,8 +1,12 @@
 import HeaderPage from "../LandingPage/HeaderPage";
 import Home from "./Home";
 import Sponsors from "../LandingPage/Sponsors";
-import Community from "../LandingPage/Community";
-import BodyPage from "../LandingPage/BodyPage";
+import Community from "../LandingPage/Community.jsx";
+import Unlock from "./Unlock.jsx";
+import Achievements from "./Achievements.jsx";
+import Calendar from "./Calendar.jsx";
+import Customer from "./Customer.jsx";
+import Caring from "./Caring.jsx";
 import Footer from "../LandingPage/Footer";
 
 function HomePage() {
@@ -12,7 +16,11 @@ function HomePage() {
       <Home />
       <Sponsors />
       <Community />
-      <BodyPage />
+      <Unlock />
+      <Achievements />
+      <Calendar />
+      <Customer />
+      <Caring />
       <Footer />
     </div>
   );

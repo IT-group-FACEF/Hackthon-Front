@@ -1,4 +1,3 @@
-import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Flex } from "antd";
 import { login } from "../utils/auth"; // Importa a função login
@@ -7,12 +6,12 @@ import { useNavigate } from "react-router-dom"; // Para redirecionamento
 const App = () => {
   const navigate = useNavigate(); // Função de navegação
 
-  const onFinish = async (values) => {
+ const onFinish = async (values) => {
     try {
-      await login(values, navigate); // Chama login e passa 'navigate'
+      await register(values, navigate); // Chama a função de registro
+      console.log("Registro bem-sucedido:", data);
     } catch (error) {
-      // Nenhum erro precisa ser tratado aqui, pois já está em auth.js
-      console.error("Erro ao tentar fazer login:", error.message);
+      console.error("Erro ao tentar registrar:", error.message);
     }
   };
 

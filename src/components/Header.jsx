@@ -1,4 +1,3 @@
-import React from "react";
 import { Layout } from "antd"; // Importa Layout
 const { Header } = Layout; // Extrai Header de Layout
 

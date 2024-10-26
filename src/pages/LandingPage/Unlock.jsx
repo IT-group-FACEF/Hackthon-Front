@@ -3,13 +3,21 @@ import UnlockImg from "../../assets/Unlock.svg";
 
 const Unlock = () => {
   return (
-    <div id="unlock" className="flex flex-row items-center justify-center px-[144px] py-[100px]">
-      <img src={UnlockImg} alt="Unlock" />
-      <div className="flex flex-col w-[661px] pe-[49px]">
-        <p className="text-[36px] text-[#4D4D4D] pb-[16px]">
+    <div
+      id="unlock"
+      className="flex flex-col md:flex-row items-center justify-center px-4 py-10 md:px-[144px] md:py-[100px]"
+    >
+      {/* Imagem com maior tamanho */}
+      <img
+        src={UnlockImg}
+        alt="Unlock"
+        className="w-full md:w-[300px] lg:w-[400px] xl:w-[500px] h-auto" // Tamanhos responsivos
+      />
+      <div className="flex flex-col w-full md:w-[661px] md:pe-[49px] text-center md:text-left">
+        <p className="text-[24px] md:text-[36px] text-[#4D4D4D] pb-[16px]">
           Benefícios que Vão Transformar sua Vida
         </p>
-        <p className="text-[14px] text-[#717171] pb-[32px]">
+        <div className="text-[14px] text-[#717171] pb-[32px]">
           <p className="pb-[16px]">
             Autoconhecimento: "Entenda melhor suas emoções e os fatores que
             impactam sua satisfação."
@@ -22,7 +30,7 @@ const Unlock = () => {
             Crescimento Pessoal: "Ferramentas para ajudá-lo a estabelecer metas
             e a alcançar uma vida mais feliz e plena."
           </p>
-        </p>
+        </div>
       </div>
     </div>
   );

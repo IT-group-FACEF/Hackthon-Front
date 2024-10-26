@@ -16,14 +16,14 @@ body {
 
 :where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
   > .ant-menu-item-selected {
-  color: #c9d9a7; 
-  background-color: #567a35; 
+  color: #c9d9a7;
+  background-color: #567a35;
   font-weight: 500;
 }
 :where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
   > .ant-menu-item-selected:hover {
-  color: #262626; 
-  background-color: #c9d9a7; 
+  color: #262626;
+  background-color: #c9d9a7;
   font-weight: 500;
 }
 :where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
@@ -41,5 +41,9 @@ body {
 :where(.css-dev-only-do-not-override-11lehqq).ant-menu-light
   .ant-menu-item-selected {
   color: #c9d9a7;
+  background-color: #567a35;
+}
+:where(.css-dev-only-do-not-override-11lehqq).ant-layout
+  .ant-layout-sider-zero-width-trigger {
   background-color: #567a35;
 }

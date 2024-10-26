@@ -112,7 +112,7 @@ const Quests = () => {
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Navbar />
+      <Navbar title={"Questionário"} />
       <Layout>
         <Sidebar />
         <div className="flex justify-center items-center w-full h-full p-10">

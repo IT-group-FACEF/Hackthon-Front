@@ -1,4 +1,3 @@
-import React from "react";
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Flex } from "antd";
 import { login } from "../utils/auth";
@@ -9,11 +8,11 @@ const App = () => {
 
   const onFinish = async (values) => {
     try {
-      const data = await login(values); 
-      console.log('login bem-sucedido:', data);
-      navigate("/dashboard");  
+      const data = await login(values);
+      console.log("login bem-sucedido:", data);
+      navigate("/dashboard");
     } catch (error) {
-      console.error('erro ao tentar fazer login:', error.message);
+      console.error("erro ao tentar fazer login:", error.message);
     }
   };
   return (
@@ -47,7 +46,11 @@ const App = () => {
           },
         ]}
       >
-        <Input.Password prefix={<LockOutlined />} type="password" placeholder="Senha" />
+        <Input.Password
+          prefix={<LockOutlined />}
+          type="password"
+          placeholder="Senha"
+        />
       </Form.Item>
       <Form.Item>
         <Flex justify="space-between" align="center">

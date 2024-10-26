@@ -6,9 +6,9 @@ import { useNavigate } from "react-router-dom"; // Para redirecionamento
 const App = () => {
   const navigate = useNavigate(); // Função de navegação
 
- const onFinish = async (values) => {
+  const onFinish = async (values) => {
     try {
-      await register(values, navigate); // Chama a função de registro
+      await login(values, navigate); // Chama a função de registro
       console.log("Registro bem-sucedido:", data);
     } catch (error) {
       console.error("Erro ao tentar registrar:", error.message);

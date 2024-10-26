@@ -3,7 +3,7 @@ import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
 import { register } from "../utils/auth"; // Importa a função de registro
 
-const RegisterForm = () => {
+const RegisterUser = () => {
   const navigate = useNavigate();
 
   const onFinish = async (values) => {
@@ -106,4 +106,4 @@ const RegisterForm = () => {
   );
 };
 
-export default RegisterForm;
+export default RegisterUser;

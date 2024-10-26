@@ -1,5 +1,5 @@
-import { Layout } from "antd"; // Importa Layout
-const { Header } = Layout; // Extrai Header de Layout
+import { Layout } from "antd"; 
+const { Header } = Layout; 
 
 const CustomHeader = () => {
   return (

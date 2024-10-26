@@ -16,14 +16,14 @@ body {
 
 :where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
   > .ant-menu-item-selected {
-  color: #c9d9a7; /* Cor do texto do item selecionado */
-  background-color: #567a35; /* Cor de fundo do item selecionado */
+  color: #c9d9a7; 
+  background-color: #567a35; 
   font-weight: 500;
 }
 :where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
   > .ant-menu-item-selected:hover {
-  color: #262626; /* Cor do texto do item selecionado */
-  background-color: #c9d9a7; /* Cor de fundo do item selecionado */
+  color: #262626; 
+  background-color: #c9d9a7; 
   font-weight: 500;
 }
 :where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal

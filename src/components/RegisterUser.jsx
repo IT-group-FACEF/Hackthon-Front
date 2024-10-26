@@ -2,15 +2,16 @@ import { useState } from "react";
 import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
-import { register } from "../utils/auth"; // Importa a função de registro
+import { register } from "../utils/auth"; 
 
 const RegisterUser = () => {
   const navigate = useNavigate();
 
-const [buttonHover, setButtonHover] = useState(false);
+  const [buttonHover, setButtonHover] = useState(false);
+
   const onFinish = async (values) => {
     try {
-      await register(values, navigate); // Chama a função de registro
+      await register(values, navigate); 
       console.log("Registro bem-sucedido:", data);
     } catch (error) {
       console.error("Erro ao tentar registrar:", error.message);
@@ -38,7 +39,10 @@ const [buttonHover, setButtonHover] = useState(false);
           },
         ]}
       >
-        <Input prefix={<UserOutlined />} placeholder="Usuário" />
+        <Input
+          prefix={<UserOutlined style={{ color: "#262626" }} />}
+          placeholder="Usuário"
+        />
       </Form.Item>
       <Form.Item
         name="email"
@@ -54,7 +58,10 @@ const [buttonHover, setButtonHover] = useState(false);
           },
         ]}
       >
-        <Input prefix={<MailOutlined />} placeholder="E-mail" />
+        <Input
+          prefix={<MailOutlined style={{ color: "#262626" }} />}
+          placeholder="E-mail"
+        />
       </Form.Item>
       <Form.Item
         name="password"
@@ -67,7 +74,7 @@ const [buttonHover, setButtonHover] = useState(false);
         ]}
       >
         <Input.Password
-          prefix={<LockOutlined />}
+          prefix={<LockOutlined style={{ color: "#262626" }} />}
           type="password"
           placeholder="Senha"
         />
@@ -94,7 +101,7 @@ const [buttonHover, setButtonHover] = useState(false);
         ]}
       >
         <Input.Password
-          prefix={<LockOutlined />}
+          prefix={<LockOutlined style={{ color: "#262626" }} />}
           type="password"
           placeholder="Confirmar Senha"
         />
@@ -109,8 +116,8 @@ const [buttonHover, setButtonHover] = useState(false);
             borderColor: "#3C5220",
             color: "#F2E8CF",
           }}
-          onMouseEnter={() => setButtonHover(true)} // Muda para hover
-          onMouseLeave={() => setButtonHover(false)} // Retorna ao normal
+          onMouseEnter={() => setButtonHover(true)}
+          onMouseLeave={() => setButtonHover(false)}
         >
           Registrar
         </Button>

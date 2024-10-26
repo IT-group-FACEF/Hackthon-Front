@@ -40,4 +40,4 @@ const DemoChangeData = () => {
   return <Pie {...config} />;
 };
 
-ReactDOM.render(<DemoChangeData />, document.getElementById("container"));
+export default DemoChangeData;

@@ -105,8 +105,7 @@ const Quests = () => {
 
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Navbar 
-        title={"Questionário"}/>
+      <Navbar title={"Questionário"} />
       <Layout>
         <Sidebar />
         <div className="flex justify-center items-center w-full h-full p-10">
@@ -132,15 +131,10 @@ const Quests = () => {
               >
                 <label className="text-lg mb-2 text-xl">{question}</label>
                 <Rate
-<<<<<<< HEAD
-                  defaultValue={3} // Valor inicial
-                  character={({ index = 0 }) => customIcons[index + 1]}
-=======
                   defaultValue={3}
                   character={({ index = 0 }) => customIcons[index + 1]}
                   className="flex justify-around py-5"
                   style={{ color: "#3C5220" }}
->>>>>>> b71ed2559fd30491042477b78399a40b8448cee0
                 />
               </Form.Item>
             ))}

@@ -13,46 +13,17 @@ body {
   margin: 0;
   padding: 0;
   color: #262626;
-<<<<<<< HEAD
+
   font-family: 'Poppins', sans-serif;
-=======
 }
 
-:where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item-selected {
-  color: #c9d9a7;
-  background-color: #567a35;
-  font-weight: 500;
-}
-:where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item-selected:hover {
-  color: #262626;
-  background-color: #c9d9a7;
-  font-weight: 500;
-}
-:where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item-selected::after {
-  border-bottom-color: #567a35;
-}
-:where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item-selected:hover:after {
-  border-bottom-color: #262626;
-}
-:where(.css-dev-only-do-not-override-11lehqq).ant-menu-light.ant-menu-horizontal
-  > .ant-menu-item-active:hover:after {
-  border-bottom-color: #262626;
->>>>>>> b71ed2559fd30491042477b78399a40b8448cee0
-}
 :where(.css-dev-only-do-not-override-11lehqq).ant-menu-light
   .ant-menu-item-selected {
   color: #c9d9a7;
   background-color: #567a35;
 }
-<<<<<<< HEAD
 
-=======
 :where(.css-dev-only-do-not-override-11lehqq).ant-layout
   .ant-layout-sider-zero-width-trigger {
   background-color: #567a35;
 }
->>>>>>> b71ed2559fd30491042477b78399a40b8448cee0

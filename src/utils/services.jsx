@@ -3,7 +3,7 @@ import { message } from "antd";
 
 const submitQuestionnaire = async (data) => {
   try {
-    const response = await api.post(`/questionnaire`, data);
+    const response = await api.post(`/quest`, data);
     message.success("Questionário enviado com sucesso!");
     return response.data;
   } catch (error) {

@@ -8,7 +8,7 @@ import Pizza from "../../Charts/AdmData";
 import Line from "../../Charts/UserData";
 import Card from "../../components/Card";
 
-const Dashboard = () => {
+const DashboardUser = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
       <Navbar />
@@ -26,19 +26,9 @@ const Dashboard = () => {
             <div
               style={{
                 flex: 1,
-                minHeight: "300px",
-                maxWidth: "500px",
-                padding: "0 10px",
-              }}
-            >
-              <Pizza />
-            </div>
-            <div
-              style={{
-                flex: 1,
-                minHeight: "300px",
-                maxWidth: "700px",
-                padding: "0 10px",
+                minHeight: "200px",
+                maxWidth: "900px",
+                padding: "0 20px 20px",
               }}
             >
               <Line />
@@ -69,4 +59,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardUser;

@@ -6,20 +6,23 @@ export const login = async (credentials, navigate) => {
     const response = await api.post("/login", credentials);
 
     if (response.status === 200) {
-      message.success("Login bem-sucedido!"); 
-      navigate("/dashboard"); 
+      message.success("Login bem-sucedido!");
+      navigate("/dashboard");
       return response.data;
-    } else {
-      throw new Error("Login falhou");
     }
   } catch (error) {
-    if (error.response && error.response.status === 401) {
-      message.error("Credenciais inválidas");
+    if (error.response) {
+      const errorMessage =
+        error.response.data?.message ||
+        (error.response.status === 401
+          ? "Credenciais inválidas"
+          : "Erro no servidor. Tente novamente mais tarde.");
+
+      message.error(errorMessage);
     } else {
-      console.error("Erro no login:", error);
-      message.error("Erro no login: " + error.message);
+      message.error("Erro de conexão. Verifique sua rede e tente novamente.");
     }
-    throw error; 
+    throw error;
   }
 };
 
@@ -28,18 +31,21 @@ export const register = async (userData, navigate) => {
     const response = await api.post("/register", userData);
 
     if (response.status === 200) {
-      message.success("Registro bem-sucedido!"); 
-      navigate("/login"); 
+      message.success("Registro bem-sucedido!");
+      navigate("/login");
       return response.data;
-    } else {
-      throw new Error("Login falhou");
     }
   } catch (error) {
-    if (error.response && error.response.status === 401) {
-      message.error("Credenciais inválidas");
+    if (error.response) {
+      const errorMessage =
+        error.response.data?.message ||
+        (error.response.status === 400
+          ? "Dados inválidos. Verifique e tente novamente."
+          : "Erro no servidor. Tente novamente mais tarde.");
+
+      message.error(errorMessage);
     } else {
-      console.error("Erro no login:", error);
-      message.error("Erro no login: " + error.message);
+      message.error("Erro de conexão. Verifique sua rede e tente novamente.");
     }
     throw error;
   }

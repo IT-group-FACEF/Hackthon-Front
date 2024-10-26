@@ -6,6 +6,7 @@ import RegisterUsuario from "../pages/Auth/RegisterUsuario.jsx";
 import DashboardUser from "../pages/interfaces/DashboardUser.jsx";
 import DashboardCompany from "../pages/interfaces/DashboardCompany.jsx";
 import Quests from "../pages/Quests/Quest.jsx";
+import Users from "../pages/Perfil/Users.jsx";
 
 function AppRoutes() {
   return (
@@ -18,6 +19,7 @@ function AppRoutes() {
         <Route path="/dashboard" element={<DashboardCompany />}></Route>
         <Route path="/dashboardUser" element={<DashboardUser />}></Route>
         <Route path="/quests" element={<Quests />}></Route>
+        <Route path="/users" element={<Users />}></Route>
       </Routes>
     </Router>
   );

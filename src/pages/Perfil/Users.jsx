@@ -1,15 +1,11 @@
 import { Layout } from "antd";
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
-import Pizza from "../../Charts/AdmData";
-import Line from "../../Charts/UserData";
-import Card from "../../components/Card";
 
-const DashboardCompany = () => {
+const User = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Navbar 
-        title={"Dashboard"}/>
+      <Navbar title={"Dashboard"} />
       <Layout>
         <Sidebar />
         <Layout style={{ display: "flex" }}>
@@ -28,7 +24,6 @@ const DashboardCompany = () => {
                 padding: "0 10px",
               }}
             >
-              <Pizza />
             </div>
             <div
               style={{
@@ -38,27 +33,12 @@ const DashboardCompany = () => {
                 padding: "0 10px",
               }}
             >
-              <Line />
             </div>
           </Layout>
           <Layout
             style={{ flexDirection: "row", justifyContent: "space-around" }}
           >
-            <Card
-              style={{}}
-              title={"Metas de Saúde e Programas de Incentivo"}
-              value={"teste"}
-            />
-            <Card
-              style={{}}
-              title={"Metas de Saúde e Programas de Incentivo"}
-              value={"teste"}
-            />
-            <Card
-              style={{}}
-              title={"Metas de Saúde e Programas de Incentivo"}
-              value={"teste"}
-            />
+            <h3>Users</h3>
           </Layout>
         </Layout>
       </Layout>
@@ -66,4 +46,4 @@ const DashboardCompany = () => {
   );
 };
 
-export default DashboardCompany;
+export default User;

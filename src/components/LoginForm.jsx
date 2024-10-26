@@ -2,11 +2,11 @@ import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Flex } from "antd";
 import { login } from "../utils/auth";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react"; // Importando useState
+import { useState } from "react"; 
 
 const App = () => {
   const navigate = useNavigate();
-  const [buttonHover, setButtonHover] = useState(false); // Estado para controlar o hover do botão
+  const [buttonHover, setButtonHover] = useState(false); 
 
   const onFinish = async (values) => {
     try {

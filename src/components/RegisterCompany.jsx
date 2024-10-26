@@ -7,16 +7,17 @@ import {
 } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
-import { register } from "../utils/auth"; // Importa a função de registro
+import { register } from "../utils/auth";
 import { useState } from "react";
 
 const RegisterCompany = () => {
   const navigate = useNavigate();
 
   const [buttonHover, setButtonHover] = useState(false);
+
   const onFinish = async (values) => {
     try {
-      await register(values, navigate); // Chama a função de registro
+      await register(values, navigate); 
       console.log("Registro bem-sucedido:", data);
     } catch (error) {
       console.error("Erro ao tentar registrar:", error.message);
@@ -144,7 +145,7 @@ const RegisterCompany = () => {
             borderColor: "#3C5220",
             color: "#F2E8CF",
           }}
-          onMouseEnter={() => setButtonHover(true)} // Muda para hover
+          onMouseEnter={() => setButtonHover(true)} 
           onMouseLeave={() => setButtonHover(false)}
         >
           Registrar

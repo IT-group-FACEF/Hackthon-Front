@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { UserOutlined, LockOutlined, MailOutlined } from "@ant-design/icons";
 import { Button, Form, Input } from "antd";
 import { useNavigate } from "react-router-dom";
@@ -6,6 +7,7 @@ import { register } from "../utils/auth"; // Importa a função de registro
 const RegisterUser = () => {
   const navigate = useNavigate();
 
+const [buttonHover, setButtonHover] = useState(false);
   const onFinish = async (values) => {
     try {
       await register(values, navigate); // Chama a função de registro
@@ -98,7 +100,18 @@ const RegisterUser = () => {
         />
       </Form.Item>
       <Form.Item>
-        <Button block type="primary" htmlType="submit">
+        <Button
+          block
+          type="primary"
+          htmlType="submit"
+          style={{
+            backgroundColor: buttonHover ? "#567A35" : "#3C5220",
+            borderColor: "#3C5220",
+            color: "#F2E8CF",
+          }}
+          onMouseEnter={() => setButtonHover(true)} // Muda para hover
+          onMouseLeave={() => setButtonHover(false)} // Retorna ao normal
+        >
           Registrar
         </Button>
       </Form.Item>

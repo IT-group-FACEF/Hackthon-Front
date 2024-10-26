@@ -9,11 +9,11 @@ import { submitQuestionnaire } from "../../utils/services.jsx";
 const { Title } = Typography;
 
 const customIcons = {
-  1: <FrownOutlined />,
-  2: <FrownOutlined />,
-  3: <MehOutlined />,
-  4: <SmileOutlined />,
-  5: <SmileOutlined />,
+  1: <FrownOutlined style={{ margin: "0 30px" }} />,
+  2: <FrownOutlined style={{ margin: "0 30px" }} />,
+  3: <MehOutlined style={{ margin: "0 30px" }} />,
+  4: <SmileOutlined style={{ margin: "0 30px" }} />,
+  5: <SmileOutlined style={{ margin: "0 30px" }} />,
 };
 
 const questions = [
@@ -136,12 +136,23 @@ const Quests = () => {
                 ]}
                 style={{ marginBottom: "20px", width: "100%" }}
               >
-                <label className="text-lg mb-2 text-xl">{question}</label>
+                <label
+                  className="text-lg mb-2 text-xl"
+                  style={{ textAlign: "center" }}
+                >
+                  {question}
+                </label>
                 <Rate
                   defaultValue={3}
                   character={({ index = 0 }) => customIcons[index + 1]}
                   className="flex justify-around py-5"
-                  style={{ color: "#3C5220" }}
+                  style={{
+                    color: "#3C5220",
+                    fontSize: "24px",
+                    width: "100%",
+                    display: "flex",
+                    justifyContent: "center",
+                  }}
                 />
               </Form.Item>
             ))}

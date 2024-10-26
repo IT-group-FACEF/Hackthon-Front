@@ -1,20 +1,20 @@
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Flex } from "antd";
-import { login } from "../utils/auth";
-import { useNavigate } from "react-router-dom";
+import { login } from "../utils/auth"; // Importa a função login
+import { useNavigate } from "react-router-dom"; // Para redirecionamento
 
 const App = () => {
-  const navigate = useNavigate();
+  const navigate = useNavigate(); // Função de navegação
 
-  const onFinish = async (values) => {
+ const onFinish = async (values) => {
     try {
-      const data = await login(values);
-      console.log("login bem-sucedido:", data);
-      navigate("/dashboard");
+      await register(values, navigate); // Chama a função de registro
+      console.log("Registro bem-sucedido:", data);
     } catch (error) {
-      console.error("erro ao tentar fazer login:", error.message);
+      console.error("Erro ao tentar registrar:", error.message);
     }
   };
+
   return (
     <Form
       name="login"
@@ -72,4 +72,5 @@ const App = () => {
     </Form>
   );
 };
+
 export default App;

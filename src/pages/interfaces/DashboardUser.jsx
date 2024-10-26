@@ -1,21 +1,17 @@
-import React from "react";
 import { Layout } from "antd";
 import Navbar from "../../components/Navbar";
 import Sidebar from "../../components/Sidebar";
-import DashboardHeader from "../../components/Header";
-import Content from "../../components/Content";
-import Pizza from "../../Charts/AdmData";
 import Line from "../../Charts/UserData";
 import Card from "../../components/Card";
 
 const DashboardUser = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Navbar />
+      <Navbar 
+        title={"Dashboard"}/>
       <Layout>
         <Sidebar />
         <Layout style={{ display: "flex" }}>
-          <DashboardHeader />
           <Layout
             style={{
               flexDirection: "row",

@@ -8,10 +8,10 @@ import Pizza from "../../Charts/AdmData";
 import Line from "../../Charts/UserData";
 import Card from "../../components/Card";
 
-const Dashboard = () => {
+const DashboardCompany = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Navbar/>
+      <Navbar />
       <Layout>
         <Sidebar />
         <Layout style={{ display: "flex" }}>
@@ -69,4 +69,4 @@ const Dashboard = () => {
   );
 };
 
-export default Dashboard;
+export default DashboardCompany;

@@ -7,8 +7,7 @@ import Card from "../../components/Card";
 const DashboardUser = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Navbar 
-        title={"Dashboard"}/>
+      <Navbar title={"Dashboard"} />
       <Layout>
         <Sidebar />
         <Layout style={{ display: "flex" }}>
@@ -34,19 +33,30 @@ const DashboardUser = () => {
             style={{ flexDirection: "row", justifyContent: "space-around" }}
           >
             <Card
-              style={{}}
               title={"Metas de Saúde e Programas de Incentivo"}
-              value={"teste"}
+              value={[
+                "Aumentar a atividade física diariamente.",
+                "Melhorar a alimentação com mais frutas e vegetais.",
+                "Beber pelo menos 2 litros de água por dia.",
+                "Praticar meditação para reduzir o estresse.",
+                "Dormir de 7 a 8 horas por noite.",
+              ]}
             />
             <Card
-              style={{}}
               title={"Metas de Saúde e Programas de Incentivo"}
-              value={"teste"}
+              value={[
+                "Participar de exames de saúde regulares.",
+                "Evitar o consumo excessivo de açúcar.",
+                "Promover a saúde mental através de atividades sociais.",
+              ]}
             />
             <Card
-              style={{}}
               title={"Metas de Saúde e Programas de Incentivo"}
-              value={"teste"}
+              value={[
+                "Fazer caminhadas de 30 minutos diariamente.",
+                "Reduzir o consumo de alimentos processados.",
+                "Realizar check-ups anuais.",
+              ]}
             />
           </Layout>
         </Layout>

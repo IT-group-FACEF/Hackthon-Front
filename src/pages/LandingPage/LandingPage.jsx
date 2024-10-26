@@ -5,7 +5,7 @@ import Community from "../LandingPage/Community.jsx";
 import Unlock from "./Unlock.jsx";
 import Achievements from "./Achievements.jsx";
 import Calendar from "./Calendar.jsx";
-import Customer from "./Customer.jsx";
+import Costumer from "./Costumer.jsx";
 import Caring from "./Caring.jsx";
 import Footer from "../LandingPage/Footer";
 
@@ -19,7 +19,7 @@ function HomePage() {
       <Unlock />
       <Achievements />
       <Calendar />
-      <Customer />
+      <Costumer />
       <Caring />
       <Footer />
     </div>

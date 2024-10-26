@@ -18,18 +18,40 @@ const Header = () => {
 
       {/* Botões de Âncoras */}
       <div className="flex space-x-4">
-        <Button buttonText="Benefícios" typeButton="text" onClick={() => scrollToSection("unlock")} />
-        <Button buttonText="Comunidade" typeButton="text" onClick={() => scrollToSection("achievements")} />
-        <Button buttonText="Sua Empresa" typeButton="text" onClick={() => scrollToSection("caring")} />
+        <Button
+          buttonText="Benefícios"
+          typeButton="text"
+          onClick={() => scrollToSection("unlock")}
+        />
+        <Button
+          buttonText="Comunidade"
+          typeButton="text"
+          onClick={() => scrollToSection("achievements")}
+        />
+        <Button
+          buttonText="Sua Empresa"
+          typeButton="text"
+          onClick={() => scrollToSection("caring")}
+        />
       </div>
 
       {/* Botões de Login e Cadastro */}
       <div className="flex space-x-4">
-        <Button buttonText="Login" typeButton="text" onClick={() => (window.location.href = "/login")} />
         <Button
-          buttonText="Sign Up"
+          buttonText="Entrar"
+          typeButton="text"
+          onClick={() => (window.location.href = "/login")}
+        />
+        <Button
+          buttonText="Registrar para Usuários"
           typeButton="primary"
-          onClick={() => (window.location.href = "/register")}
+          onClick={() => (window.location.href = "/registerUser")}
+          style={{ backgroundColor: "#3C5220", color: "#FFFFFF" }}
+        />
+        <Button
+          buttonText="Registrar para Empresas"
+          typeButton="primary"
+          onClick={() => (window.location.href = "/registerCompany")}
           style={{ backgroundColor: "#3C5220", color: "#FFFFFF" }}
         />
       </div>

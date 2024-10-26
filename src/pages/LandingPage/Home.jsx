@@ -50,12 +50,12 @@ const Home = () => (
         </div>
       </div>
       <div>
-        <div className="flex justify-center items-center px-[144px] py-[80px] space-x-4 space-y-9 bg-[#FDF5E6]">
+        <div className="flex justify-center items-center px-[144px] py-[80px] space-x-[300px] space-y-9 bg-[#FDF5E6]">
           <div className="flex flex-col">
             <div>
               <p className="text-[64px] text-[#262626]">
-                Entenda como sua equipe se sente
-                <p className="text-[#567A35]">com dados reais.</p>
+                Entenda como sua equipe
+                <p className="text-[#567A35]"> se sente, com dados reais.</p>
               </p>
               <p className="text-[16px] text-[#717171] pt-[16px] pb-[32px]">
                 Através de gráficos e indicadores de bem-estar e satisfação, é

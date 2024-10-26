@@ -1,14 +1,16 @@
 import { LockOutlined, UserOutlined } from "@ant-design/icons";
 import { Button, Checkbox, Form, Input, Flex } from "antd";
-import { login } from "../utils/auth"; // Importa a função login
-import { useNavigate } from "react-router-dom"; // Para redirecionamento
+import { login } from "../utils/auth";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react"; // Importando useState
 
 const App = () => {
-  const navigate = useNavigate(); // Função de navegação
+  const navigate = useNavigate();
+  const [buttonHover, setButtonHover] = useState(false); // Estado para controlar o hover do botão
 
   const onFinish = async (values) => {
     try {
-      await login(values, navigate); // Chama a função de registro
+      await login(values, navigate);
       console.log("Registro bem-sucedido:", data);
     } catch (error) {
       console.error("Erro ao tentar registrar:", error.message);
@@ -24,6 +26,7 @@ const App = () => {
       style={{
         maxWidth: 360,
       }}
+
       onFinish={onFinish}
     >
       <Form.Item
@@ -55,19 +58,49 @@ const App = () => {
       <Form.Item>
         <Flex justify="space-between" align="center">
           <Form.Item name="remember" valuePropName="checked" noStyle>
-            <Checkbox>Manter-me logado</Checkbox>
+            <Checkbox>Manter-me logado </Checkbox>
           </Form.Item>
-          <a href="">Esqueceu sua senha?</a>
+          <span
+            style={{
+              color: "#3C5220",
+              cursor: "pointer",
+            }}
+            onMouseOver={(e) => (e.target.style.color = "#567A35")}
+            onMouseOut={(e) => (e.target.style.color = "#3C5220")}
+          >
+            Esqueceu sua senha?
+          </span>
         </Flex>
       </Form.Item>
 
       <Form.Item>
-        <Button block type="primary" htmlType="submit">
+        {/* Estilo para o botão com hover */}
+        <Button
+          block
+          style={{
+            backgroundColor: buttonHover ? "#567A35" : "#3C5220",
+            borderColor: "#3C5220",
+            color: "#F2E8CF",
+          }}
+          htmlType="submit"
+          onMouseEnter={() => setButtonHover(true)} // Muda para hover
+          onMouseLeave={() => setButtonHover(false)} // Retorna ao normal
+        >
           Entrar
         </Button>
-        <a style={{ display: "block", marginTop: "10px" }} href="">
-          Registre-se agora!
-        </a>
+        <span style={{ display: 'block', marginTop: '30px' }}>
+          Não possui conta?{" "}
+          <span
+            style={{
+              color: "#3C5220",
+              cursor: "pointer",
+            }}
+            onMouseOver={(e) => (e.target.style.color = "#567A35")}
+            onMouseOut={(e) => (e.target.style.color = "#3C5220")}
+          >
+            Registre-se
+          </span>
+        </span>
       </Form.Item>
     </Form>
   );

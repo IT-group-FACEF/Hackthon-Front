@@ -8,13 +8,15 @@ import Footer from "../LandingPage/Footer";
 
 function HomePage() {
   return (
-    <div>
+    <div className="flex flex-col min-h-screen">
       <HeaderPage />
-      <Home />
-      <Unlock />
-      <Achievements />
-      <Calendar />
-      <Caring />
+      <main className="flex-grow">
+        <Home />
+        <Unlock />
+        <Achievements />
+        <Calendar />
+        <Caring />
+      </main>
       <Footer />
     </div>
   );

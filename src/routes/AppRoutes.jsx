@@ -8,6 +8,7 @@ import DashboardCompany from "../pages/interfaces/DashboardCompany.jsx";
 import Quests from "../pages/Quests/Quest.jsx";
 import QuestsUser from "../pages/Quests/QuestUser.jsx";
 import Users from "../pages/Perfil/Users.jsx";
+import EmailVerification from "../pages/Auth/AuthenticatorEmail.jsx";
 
 function AppRoutes() {
   return (
@@ -22,6 +23,10 @@ function AppRoutes() {
         <Route path="/quests" element={<Quests />}></Route>
         <Route path="/questsUser" element={<QuestsUser />}></Route>
         <Route path="/Users" element={<Users />}></Route>
+        <Route
+          path="/emailVerification"
+          element={<EmailVerification />}
+        ></Route>
       </Routes>
     </Router>
   );

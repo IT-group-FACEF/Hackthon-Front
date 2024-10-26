@@ -48,8 +48,8 @@ const Quests = () => {
             >
               <Flex gap="middle" vertical>
                 <Rate
-                  defaultValue={3} // Valor inicial
-                  character={({ index = 0 }) => customIcons[index + 1]} // Usando customIcons
+                  defaultValue={3} 
+                  character={({ index = 0 }) => customIcons[index + 1]} 
                 />
               </Flex>
             </Form.Item>

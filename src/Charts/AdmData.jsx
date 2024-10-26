@@ -8,22 +8,22 @@ const DemoChangeData = () => {
   React.useEffect(() => {
     setTimeout(() => {
       setData([
-        { type: "Categoria 1", value: 27 },
-        { type: "Categoria 2", value: 25 },
-        { type: "Categoria 3", value: 18 },
-        { type: "Categoria 4", value: 15 },
-        { type: "Categoria 5", value: 10 },
-        { type: "Outros", value: 5 },
+        { type: "Resposta 1", Pessoas: 27 },
+        { type: "Resposta 2", Pessoas: 25 },
+        { type: "Resposta 3", Pessoas: 18 },
+        { type: "Resposta 4", Pessoas: 15 },
+        { type: "Resposta 5", Pessoas: 10 },
+        { type: "Resposta 6", Pessoas: 40 },
       ]);
     }, 1000);
   }, []);
 
   const config = {
     data,
-    angleField: "value",
+    angleField: "Pessoas",
     colorField: "type",
     label: {
-      text: "value",
+      text: "Pessoas",
       style: {
         fontWeight: "bold",
       },

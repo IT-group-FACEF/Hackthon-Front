@@ -11,7 +11,7 @@ import Card from "../../components/Card";
 const Dashboard = () => {
   return (
     <Layout style={{ minHeight: "100vh" }}>
-      <Navbar />
+      <Navbar/>
       <Layout>
         <Sidebar />
         <Layout style={{ display: "flex" }}>

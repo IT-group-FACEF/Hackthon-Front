@@ -1,9 +1,5 @@
 import { Layout, Menu } from "antd";
-import {
-  DashboardOutlined,
-  UserOutlined,
-  SettingOutlined,
-} from "@ant-design/icons";
+import { DashboardOutlined, QuestionOutlined } from "@ant-design/icons";
 
 const { Sider } = Layout;
 
@@ -21,19 +17,15 @@ const Sidebar = () => {
       className="site-layout-background"
     >
       <Menu
-        theme="dark"
         mode="inline"
         defaultSelectedKeys={["1"]}
-        style={{ height: "100%", borderRight: 0 }}
+        style={{ height: "100%", borderRight: 0, backgroundColor: "#C9D9A7" }}
       >
         <Menu.Item key="1" icon={<DashboardOutlined />}>
           Dashboard
         </Menu.Item>
-        <Menu.Item key="2" icon={<UserOutlined />}>
-          Users
-        </Menu.Item>
-        <Menu.Item key="3" icon={<SettingOutlined />}>
-          Settings
+        <Menu.Item key="2" icon={<QuestionOutlined />}>
+          Perguntas
         </Menu.Item>
       </Menu>
     </Sider>

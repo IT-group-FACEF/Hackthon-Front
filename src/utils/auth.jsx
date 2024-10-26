@@ -23,7 +23,7 @@ export const login = async (credentials, navigate) => {
   }
 };
 
-export const register = async (userData) => {
+export const register = async (userData, navigate) => {
   try {
     const response = await api.post("/register", userData);
 

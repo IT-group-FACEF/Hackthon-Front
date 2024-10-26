@@ -1,12 +1,12 @@
-import { Button, Flex } from "antd";
+import { Button as AntdButton, Flex } from "antd";
 
 // eslint-disable-next-line react/prop-types
-const Login = ({ buttonText, typeButton, style, href }) => (
+const Button = ({ buttonText, typeButton, style, onClick }) => (
   <Flex gap="small" wrap>
-    <Button type={typeButton} style={style} href={href}>
+    <AntdButton type={typeButton} style={style} onClick={onClick}>
       {buttonText}
-    </Button>
+    </AntdButton>
   </Flex>
 );
 
-export default Login;
+export default Button;

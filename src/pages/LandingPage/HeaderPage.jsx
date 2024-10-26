@@ -1,25 +1,36 @@
-import logo from "../../assets/logo.jpeg";
+import logo from "../../assets/logo.png";
 import Button from "../../components/Button.jsx";
 
 const Header = () => {
+  // Função para rolar até a seção pelo id
+  const scrollToSection = (targetId) => {
+    document.getElementById(targetId)?.scrollIntoView({ behavior: "smooth" });
+  };
+
   return (
-    <div className="flex justify-between items-center px-4 py-2 bg-[#F5F7FA]">
+    <div className="flex justify-between items-center px-4 py-2 bg-[#C9D9A7]">
+      {/* Logo */}
       <div className="flex">
         <a href="/">
-          <img src={logo} alt="Logo" className="h-20" />
+          <img className="h-[50px] w-[70px]" src={logo} alt="Logo" />
         </a>
       </div>
+
+      {/* Botões de Âncoras */}
       <div className="flex space-x-4">
-        <Button buttonText="Home" typeButton="text" href="/" />
-        <Button buttonText="Dashboard" typeButton="text" href="/dashboard" />
+        <Button buttonText="Benefícios" typeButton="text" onClick={() => scrollToSection("unlock")} />
+        <Button buttonText="Comunidade" typeButton="text" onClick={() => scrollToSection("achievements")} />
+        <Button buttonText="Sua Empresa" typeButton="text" onClick={() => scrollToSection("caring")} />
       </div>
+
+      {/* Botões de Login e Cadastro */}
       <div className="flex space-x-4">
-        <Button buttonText="Login" typeButton="text" href="/login" />
+        <Button buttonText="Login" typeButton="text" onClick={() => (window.location.href = "/login")} />
         <Button
           buttonText="Sign Up"
           typeButton="primary"
-          href="/register"
-          style={{ backgroundColor: "#4CAF4F", color: "#FFFFFF" }}
+          onClick={() => (window.location.href = "/register")}
+          style={{ backgroundColor: "#3C5220", color: "#FFFFFF" }}
         />
       </div>
     </div>

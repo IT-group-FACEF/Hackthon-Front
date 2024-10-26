@@ -1,7 +1,6 @@
 import PropTypes from "prop-types";
-import Button from "./Button";
 
-const Card = ({ imageUrl, content, buttonText, typeButton, hrefButton }) => {
+const Card = ({ imageUrl, content }) => {
   return (
     <div className="relative w-full max-w-xs">
       {/* Imagem de fundo */}
@@ -15,11 +14,6 @@ const Card = ({ imageUrl, content, buttonText, typeButton, hrefButton }) => {
       {/* Div branca posicionada no final da imagem */}
       <div className="flex flex-col absolute inset-x-0 bottom-0 bg-white p-4 shadow-lg rounded-lg mx-auto w-4/5 text-center items-center">
         <p className="text-[20px] text-[#717171]">{content} </p>
-        <Button
-          buttonText={buttonText}
-          typeButton={typeButton}
-          href={hrefButton}
-        />
       </div>
     </div>
   );

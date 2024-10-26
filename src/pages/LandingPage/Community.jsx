@@ -1,7 +1,7 @@
 import { UserOutlined } from "@ant-design/icons";
 const Community = () => {
   return (
-    <div>
+    <div id="community" className="flex flex-col justify-center items-center py-[70px]">
       <div className="flex flex-col pt-[100px] items-center">
         <div className="flex items-center">
           <p className="text-[36px] text-[#4D4D4D] text-center">
